@@ -1,181 +1,167 @@
-# [08/52] Real World Engineering With California HSR
+# [08/52] CAHSR April Finance and Audit
 
-We are going to do something completely different today. I've mentioned several times that I'd like to try and do more traditional engineering-focused content, and while we'll still cover a wide array of software topics, this is our first "stab" into my actual background as a practical systems engineer.
+*Original Video: https://www.youtube.com/watch?v=YNKlrY0_VOc*
 
-Modern engineering can be very interesting when you consider how it folds into interesting cases across a wide variety of practices and projects, and today's case study is no exception. There are a couple of places our investigation will go, but today we're going to look at a "Finance and Audit Committee" meeting for the California HSR (High Speed Rail) project.
+## Introduction
 
-I haven't watched this one before, though I've been very interested in previous meetings. So, this is a "reaction" to that most thrilling of topics, engineering finance and auditing. We are specifically going to look at this meeting from the lens of an engineer--someone who is interested in these sorts of projects, but is perhaps baffled (and a little puzzled) by why they are doing so poorly.
+*Timestamp: ~0:00*
 
-## It Begins
+![introduction](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/aurwllbn264yovl7agjq.png)
 
-First, some brief roll call and other parlimentary actions. So far, so good. And of course the obligatory "press this button if you're on Zoom" instructions.
+At long last, the much-promised migration towards more traditional engineering things!
 
-Some background! Here, in the wonderful state of California, there have been a number of efforts to build improved and modernized rail systems. The current effort (with some preliminary ideas floated as early as the mid-90s) for high-speed rail has been going on for some time, with a "starting line" commonly measured at the passing of Proposition 1A in 2008. This proposition authorized a large bond for project funding at just under $10,000,000,000.00.
+We're going to take a look at the April meeting of the Finance and Auditing Committee meeting for the California High-Speed Rail (or CAHSR) project.
 
-Of course, it hasn't finished yet, 16 years later, and it's substantially over budget. Way above cost, way behind schedule. So, it's interesting to listen into "Finance and Audit" because if you look at the project as a whole, especially as an engineering project (wondering about what are the cost controls and schedule controls), what is pushing this project to such an extent that it makes defense contracts look good?
+In 2008, Proposition 1A passed in California, which authorized $8 billion to develop a high-speed rail system in the state. This is commonly used as the "starting line" for tracking project progress, although other efforts and studies had taken place for several decades prior.
 
-For starters, it's California--and you'll see exactly how some of those things fold in. But from an engineering project perspective as well, some of those iterations are very interesting (and they'll reference some of them in the meeting). But the main takeaway I've had from listening to some of these meetings is, not so much the project as a whole, but this committee as a microcosm of the whole project, that you get interesting insights into how they are functioning and what their priorities are and what impacts that might have or reveal about the project as a whole.
+We're going to take a look at this effort through the lens of program engineering for public projects. These efforts are very difficult! This finance and audit committee is a good way to keep track of how well the project is going and what controls (for cost and schedule) exist. Specifically, we want to think about this effort from an engineering perspective--how are things being built, how are they tracked & controlled, etc.
 
-To give you an idea of just how much the goalposts have moved, consider San Fransico (a well-populated area) and Southern California (another well-populated area). They are connected by California HSR on a map but only by off-colored lines that indicate they are still undergoing environmental review. If you know California projects (and that these can still be under protest), then you know that is a decades-long process.
+## Project Overview
 
-What they *are* building are not the dashed lines between Bakersfield and Merced (that is under "Pre-construction"). They are building the *solid* line ("Under Construction") between Madiera and Fresno, down through Kings-Tulare, and then stopping a few dozen miles short of Bakersfield.
+*Timestamp: ~2:40*
 
-So, if you want to travel to the Bay Area from somewhere like where I live in Southern California, you need to either wait several more decades for these end segments to be finished, or you travel up here north of Bakersfield, hop on the rail, and then get off at Madeira and find some way to transit the rest of the way to San Francisco.
+![project overview](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/y04c5clrn6ylo3zx9ej4.png)
 
-Or you could hop on a plane and be there for around $60 for a Southwest special 90 minutes.
+For context, here's a map of the overall effort. This is largely divided into "CPs", or "construction packages". CP1 is the middle segment going roughly from Bakersfield to Merced. Other CPs include the San Francisco and Los Angeles segments.
 
-You can imagine what the economic feasibility of this project is.
+The first thing you'll notice it the parlimentary procedure. This is a great way for engineers to start thinking about how high-level committees and public events are organized. If you're not familiar with Robert's Rules of Order, you should check them out--it helps make a lot of these activities less opaque.
+
+The project started 16 years ago, and is currently booked at about 4x (or just above $30 billion dollars) the original bond funds, so there are questions among taxpayers in the state: "where are our trains!?" This committee can help us understand what's going on and how success is being measured.
+
+## Accounting Records
+
+*Timestamp: ~4:22*
+
+![accounting records](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gxfdzyisrglkldefjjx3.png)
+
+On the topic of IG auditing, my understanding is that this part of the project has gotten much better compared to a somewhat messy past. Of course, this is still the state auditing the state!
+
+The overall costs booked right now are somewhere a bit north of $30 billion. So, a lot of other funding sources are required. You'll see line items here for other funds like cap-and-trade balances, real property management funds, and disputes. There are a surprising number of disputes that exist for bills and charges between the state and the contractors working on the project. This comes about for several reasons, including changing requirements and differences in funding practices.
+
+But a *huge* portion of the cash balance right now (north of 75%) are the cap-and-trade cash funds, which are largely based on credits sold and anticipated energy savings from ridership projections.
+
+Another significant portion of funds, which they are enumerating now, comes from matching federal funds and other grants for large-scale projects and equipment purchases (like train sets).
+
+But going back to the map you can imagine that the end segments that go through both mountains and densely populated urban areas. If they're still having trouble securing right-of-way and other property parcels for the flat farmland in CP1, you can only imagine how much more difficult that is going to become.
+
+But more interesting are the specific project metrics being reported to track success:
+
+* People working on the project
+
+* Bridges completed (probably including viaducts)
+
+* Utilities relocated
+
+You can learn a lot in engineering by observing what metrics are being reported and "controlled" to track project success. For example, you can double the number of people working on the project but that doesn't necessarily increase the number of track laid in miles. Utilities are relatively low-hanging fruit to be reported, though they are getting better.
+
+Bridges and viaducts, on the other hand, end up being a significant portion of the effort. While the line is going through flat farmland, a sizable portion of the line between Bakersfield and Merced is elevated above the land using viaducts, which is significantly more expensive.
 
 ## Disputes
 
-Paying aging disputes is a priority. There are $139,000,000.00 in disputed invoices currently booked on the program. Now, this does represent a $62,000,000.00 *decrease*.
+*Timestamp: ~11:22*
 
-California's budget (while smaller than the federal government of course) is *just* big enough for most of these items to be rounding errors. But it's small enough to have a real impact when it adds up year after year.
+![executive summary, continued](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5bcjjgb4rm3gsv8bl2rz.png)
 
-Surely when an invoice is submitted with changes pending that naturally leads to a disputed payment! (I'm using some sarcasm here.) On a practical level these are very different activities, and you really come to appreciate this when you hear (throughout the remainder of the meeting) just how many changes (pending and otherwise) there are throughout the project activities. Disputes happen--does that mean they're pending!?
+Disputes have been a significant obstacle for accounting over the past 9 months I've been following these committee meetings.
 
-Of course, this is a state project, but this is a good place to bring up Nunn-McCurdy. By comparison, there's this constraint on DoD acquisitions: A contract or project gets in big trouble when its cost per unit goes above 25% the original projections. (And I thought there was a time constraint as well but I couldn't find it.)
+But 98-99% for one specific issue in disputes is... very high. This would merit risk mitigation as it likely risks cost/schedule controls.
 
-Would you like to guess if California HSR (if it was a federal project) had breached Nunn-McCurdy yet?
+One California-specific issue here is, the state budget is just big enough (many billions) that something like 8 digits of disputed funds are something of a rounding error. But for a project that's been running over 16 years, that can add up to significant accounting inconsistencies.
 
-Proposition advertised a cost of just under $10 billion, recall.
+Other interesting metrics include "how many empty seats" exist (or vacancies). Given how much of the project is contracted out, it's likely these are mostly administrative roles, so they shouldn't have a significant impact on the technical execution unless there are specific milestones they are needed for on the critical path.
 
-Including early investments, the total balance of project expenditures is now... north of $30 billion.
+The capital outlay is also interesting to look at. The construction allocation makes sense--you'd expect 80% or so to be going towards physical engineering. But this breakdown also includes continued hundreds of millions for right-of-way purchases and third-party payments jumps out at me. Those are also a lot of legal fees enumerated on the following line!
 
-How strange!
+## Expenditures and Funds
 
-Now, there is real merit on projects in the idea that, what you want to keep track of are the month-to-month and year-to-year changes. Is it going up? Is it going down? They're focusing so much on that here, though, without ever asking any of the big questions like: "Why *are* there so many disputed invoices?" "Why *are* we two or three times over the original budget?" And so on.
+*Timestamp: ~16:12*
 
-## Sales
+![expenditures and funds](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/66e8qtu23gf6g84tpaxh.png)
 
-Could we sell excess properties formerly used for construction staging?
+Here's an interesting enumeration of specific federal grants and other funding sources. There are $5.5 billion from two specific grants: ARRA and the Federal State Partnership (FSP).
 
-Gasp! But that would *bring in revenue*! We can't have that on a state project!
+$11 billion dollars is a lot of "active" contracts, though, 16 years into a construction project. This is a lot of money being spent. The small business utilization is interesting as well--a significant portion goes to professional services, in part because a lot of the physical engineering will be done by medium-to-large firms that don't qualify for that construction line item.
 
-One of the other things I find very interesting is, notice this is the "Finance and Audit" committee. Typically auditing is something that is *TO* your finances. This is very much a fox-watching-the-henhouse situation.
+This is also because there are specific small business requirements attached to bond. Very rarely do you find federal grants that don't have some sort of conditions attached. It's not just free money--states are required to satisfy specific requirements.
 
-After all, we can't sell those properties now, we might *need* them in the future!
+But... there's nearly $3 billion set aside in contingency for construction packages that haven't even started yet. This does jump out at me. This may be because they anticipate construction through highly-populated urban areas to have significant funding issues (a reasonable concern).
 
-Can we anticipate some of that revenue to come back? In other words, can we *book* on it? (These are not serious accounting questions, and completely out of line with GAAP, or Generally Accepted Accounting Practices.)
+Another item that jumps out at me is the "other contingency" line items. Specifically, there are nine digits of funds allocated for unallocated contingencies--slightly nebulous. There are another 9 digits of funds allocated for "interim use", which is also nebulous. And then there's the "other" item, the largest in the trio, which indicates someone is having a hard time finding the imagination to categorize these contingencies in a consistent logical manner!
 
-They've sold 7 or 8... and for about a million dollars in proceeds.
+## Preliminary May Report
 
-There is a concept of something in engineering projects called NRE (non-recoverable expenditure) or NRI (non-recoverable investment). I guarantee you none of the land purcahses can be booked as recoverable.
+*Timestamp: ~21:43*
 
-But... they're running "under" budget! Of course, this is the *administrative* budget, which is $93,000,000.00 for the previous year.
+![executive summary, continued](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kiy4oiaxaq3izhjls0yd.png)
 
-Keep in mind this project has been going on for 20 years, and is currently scoped at $30 billion--so, roughly $1.5 billion each year on average. So, $100 million for purely administrative cost represents about 7% of the overal expenditures.
+This is a little strange to report outlays month-to-month. Year-over-year trends are much more useful and more likely to be seen for federal funds. After all, they are allocated by fiscal year so listing awards on a monthly basis doesn't make a lot of sense.
 
-## The Big Problem
+We also see more detailed enumeration of the vacancy rates. 69 positions could be a lot if the critical path is affected by 1 in every 7 co-workers are missing!
 
-This is true across all California engineering projects. When there's a big pile of money, everyone wants it. So when you have a big budget, and you throw big piles of money at projects, everyone wants it. Can you imagine what $100 million in administration gets you?
+I also have to wonder how much of the funding stability is affected by continuing resolutions at the federal level. That can have significant impacts on what funds can consistenly carry over year-to-year, especially since grants are often a one-time program and not a "program of record".
 
-Executivee summaries of capital outlays don't help here either. For the fiscal year, it's $1.8 billion--but the *monthly* expenditure is $186 million. Do they think there are only 10 months in the year? #CaliforniaMaths
+One of the things you'll see, though, even in California, is that you have find money *wherever* you can. Each year racks up billions of dollars in additional expeneses (and don't forget inflation!), so if the federal government offers you money for (for example) ensuring sustainable electric powering of a train station, you make the adjustments you need to qualify for that funding.
 
-Part of that was a $25 million insurance payment last month. *Payment*.
+One very illuminating resource I would recommend is the classic text "The Power Broker", a look at the life of Robert Moses. Moses ruled the civic engineering landscape in New York City, and there are a variety of passages that describe how he managed to piece together funding for massive projects that the city would never be able to afford. A few billion from Albany here, a few billion from DC there, and eventually he was able to build these massive bridges and parkways. And not entirely through admirable means, I should mention.
 
-The most interesting line item, though, is the "Right of Way". This is probably the most significant item for explaning the state of the project as it is. I mentioned the "pile of money" problem. One of the places where people try and grab the pile of money is the right-of-way and third-party. What are other people spending, what were you expecting to spend, how much do you actually have to fork over to get that missing mile? Answers vary widely and the longer you wait the more expensive it's going to be (not counting the "sunk cost fallacy" that drives your own decision logic as a project).
+## Finance vs. Auditing
 
-This is particularly true when spending money for property, when it already exists and is already used for other things.
+*Timestamp: ~27:08*
 
-## Building Rail Logic
+![finance and auditing](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/egxfja3tzg3wp3m63wr5.png)
 
-This is an interesting comparison. California HSR intended for their "videos" page (on YouTube) to be an advertisement for the project as a whole. Look at this overpass! Look at this right-of-way and grade separation!
+I do think it's interesting that they have a single committee titled "Finance" *AND* "Auditing". Typically, of course, auditing is something you do *to* the finances. They did mention the state IG did some auditing work, but it's still the state auditing the state--a little bit like the fox auditing the henhouse.
 
-Let's look at one in particular, the Tule River Viaduct. Check that out. That is a huge-ass viaduct. To cross over that 80-foot river. HUGE. ASS. VIADUCT.
+The first thing we notice for this central valley report is that CP2 and CP3 are responsible for the majority of expenditures. Not only is this a lot--and may indicate CP1 construction may actually be winding down--it's a lot for segments that aren't actually undergoing engineering efforts yet at the terminals of the line.
 
-For no particular reason, let's pull up something to compare it to. Side-by-side, let's compare it to *this* bridge, about two dozen miles north of downtown Tokyo, one of the most heavily-populated areas in the world. I haven't actually looked at this before, so let's see what we see.
+Construction progress is a little difficult to track when they don't show consistent month-to-month (or quarter-to-quarter) progress. Are these funding issues? Changing scope and requirements issues?
 
-This bridge starts from here, at grade, and ends *at grade* on the other side. In fact, there's a pair of bridges. Hrm, that's so strange!
+Utilities can be a lot of things. It's one thing to restring overhead wires for power, but large sewage pipes are more difficult. But the real outlier here are telecoms, because they are regularly modernized. For a project that started in 2008, there's probably a lot more that could have been done upfront to ensure that lines (currently only 5-10 years old, in all likelihood) weren't being laid down across a known future rail grade.
 
-Now let's go back to the California HSR viaduct, being built over flat, open farmland.
+It's also interesting to note how parcels are organized for acquisitions. Are rail parcels for actual grades? Maintenance stations? And there's a lot of questions and risk involved in the environmental clearance schedule (especially in California, where these regularly siderail large engineering projects).
 
-What sort of considerations do you think go into making engineering decisions like this?
+## Design and Build
 
-## Stakeholder Downselection
+*Timestamp: ~32:01*
 
-One big problem with modern engineering projects is an early stage in the systems engineering process that goes by the term "Stakeholder Downselection".
+![design and build](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kti1b4ea7kawu9wi1m8y.png)
 
-First, you have to "Identify Your Stakeholders". But, you can't take a vote every time there's a penny that needs to be spent. You have to have some way to *represent* that slice of stakeholders within the project. So, there is a downselection process that has to take place.
+I do wonder why they have to bundle design and build. Typically in software or space/defense, for example, you have separate stages for design; development; and deployment or operations/sustainment. At this point, I would expect this to be mostly "build", not so much "design", so a breakout would be interesting. Of course, a lot of this is outsourced in packages to different contracts so if they're not organized that way at the top level it will be difficult to "flow down" the same organization for reporting.
 
-This is difficult, and I don't envy people who have to make these choices, because what you're effectively telling people is: "Bob, you can come to the meeting. We will take *your* objections seriously! Alice, Charlie--write down what you think is important, we'll think about it. But Bob's in charge of making sure your opinions are represented.
+If I was chief engineer in this project, I would probably (instead of labor rates) want to see metrics expressed in terms of miles: how many miles are graded; how many are railed; and how many are ready for train sets (powered, instrumented, etc.).
 
-So, when you think about the engineering considerations for projects like this, those engineering decisions are largely defined by which stakeholders have what priority, when it comes to the strategic direction of the project. So, the pressure will always be to *increase* the number of stakeholders in the project. There's very little pressure, until it reaches the point of potentially failing the project outright, on *decreasing* the number of stakeholders. And this step ("Stakeholder Downselection") may be skipped entirely as a result.
+The utility relocation is interesting because it is now starting with the previous month. This is a little different from previous reports, which show year-over-year progress, which does jump out at me because it makes it harder to consistently track long-term progress between committee reports.
 
-The number of stakeholders, instead, will almost always be going *up*. More voices, more chefs in the kitchen, more people trying to get their hands on the big "pile of money", on the big pile of $10 billion state bond funds that has long since vanished.
+The enumeration for utilities is even more interesting, because we see specific percentages broken down across CPs. The high number of electric utilities "NOT STARTED" in particular is a big surprise.
 
-## California Problems
+## Property and Right-of-Way
 
-You see this problem show up everywhere. In California, NGOs are a particularly big problem as far as stakeholder downselection is concerned, because their voice is a very serious component of risk to the project, when it comes to politically sensitive projects that need statewide buy-in.
+*Timestamp: ~34:42*
 
-There's *A LOT* of really good examples we could pull on here.
+![property and right-of-way](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d3e2oxp4a6v60zwsn5qy.png)
 
-There is a bus stop sunshade in Los Angeles called "La Sombrita". Lots of very interesting non-profit inputs in terms of stakeholder downselection--it was not *DOWNSELECTED*, it was *EXPANDED*. The eventualy unit cost was $10,000 for each prototype. (And $50,000 to install. After $200,000 in grant money for the initial study.)
+Right of way is a *BIG* issue. And this report is very impressive, given that they report CP2-3 and CP3 in the same diagram. I don't know if those numbers are going to stay consistent, though, given that they're still approving environmental impact and soliciting community feedback. Those plans *will* change, and other property acquisitions *will* be needed.
 
-This... is a $10,000 sunshade. And costs several times for installation. So it cost more to install it than it did to make the original device. There are a lot of rules gleaned from across a lot of organizations for projects like that.
+The "earned value" chart is fundamental "bread and butter" for these efforts. It's a good tool, tracking "burndown" (towards 0, or progress up to 100%) of time and resources. It's a useful way to compare against risk (+/- delays, for example) and evaluate specific "controls" to bring rates back to solid projections. (I'm kind of surprised at least half the deck here isn't comprised of more charts like this.)
 
-Here's another great California engineering example: Nets were installed to catch people trying to jump off of the Golden Gate bridge. It took *several years*. Remember, Nunn-McCurdy was 25% over and you report to Congress; 50% over and your project gets cancelled. These nets were originally budgeted at $76 million, construction costs rose to $224 million. To install nets.
+And here's the "design build" question! It sounds like they've realized the same concerns. "Design-bid-build" probably means you have different performers and contractors bidding on specific work segments, which is promising (if potentially more complicated and time-consuming). In particular, as mentioned above, this could help a lot with better reporting breakdowns when comparing design vs. construction tracks for engineering efforts.
 
-What do you think the Golden Gate Bridge originally cost? More than $35 million ($590 million in 2022 dollars). For *HALF* the cost of the entire bridge--that's how much it took to install nets.
+## What Have We Learned?
 
-All these things are good projects to do! They are *GOOD THINGS TO DO*. Of course. That goes without saying. But how are they being managed as engineering projects? What sort of cost and schedule controls exist? And why is it *uniquely* bad in California?
+*Timestamp: ~38:15*
 
-## Construction Estimates
+![what have we learned?](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/deh83p9v608w89xrn37y.png)
 
-Now we're 16 years in (surprising!) and they're still discovering new things to do. In this month, only 50% have started relocation. But all of these numbers are *successes* in their mind--they've bought *this much* land, they've spend *this much* money, there are *this many* people working on construction.
+Obviously, this is a complex effort. A big part of the challenge is that the goalposts are moving, the fact that the bond funds have mostly been spent, and the fact that you need to patch together funding from wherever you can find it (which isn't unusual for large-scale civic engineering projects).
 
-"Are we going to finish the right of way this year?"
+But fundamentally, there are two ways to approach complex efforts like this:
 
-"No. But now it's Dennis's turn to talk."
+1. You can start with the easy part, hoping to iterate on lessons learned and build momentum as you show progress. The problem with this approach, as it has been taken by CAHSR, is that spending all of your money to build a connection between small cities in the central valley, is that it becomes difficult to make reliable ridership projections.
 
-Poor Dennis. Sorry, Dennis! Here's the bus. *BAM!*
+2. You can start with the hardest part. If you can figure out the hardest part, everything else should fall into place and be relatively easy. One of my favorite examples is the work of Hyman Rickover. We had nuclear reactors on submarines before we had them on aircraft carriers! But because we started with submarines (a tightly-confined space where nothing can go wrong) it then became much easier to adapt that technology to massive aircraft carriers and even other large surface vessels like heavy cruisers.
 
-There are design changes, and that means these processes have to be started over. (This is a key hallmark of poor planning.) "Design changes" are another term for "moving goalposts", or "requirements creep", as we call it in systems engineering.
+In this case, it would make a lot more sense to start with the "hardest" part by connecting large cities at the ends (in the north, connecting San Fransico with San Jose and Sacramento; in the south, connecting Los Angeles with San Diego and Riverside or Anaheim). Not only do you push through the densely-populated urban construction difficulties first, you would be able to establish more profitable ridership numbers for efforts that could start funding follow-on efforts across the state.
 
-"How many will we have left by the end of 2024?"
+![california and taxpayer](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/v4wsdl3ci90cyt187r81.jpg)
 
-"I don't know."
-
-This may very well be the single biggest problem with accountability and auditing on the project--but no one has any clue.
-
-## Success
-
-And in the meantime, there's lots of comments! Comments everywhere. Lots of comments to include and consider for projects approved by statewide measure 16 years ago. 
-
-But November was a very strong month! And this really is the secret.
-
-*What does success look like?* Every other sentance gives you another little glimpse into what the objectives are and what the metrics are for success--that is, success of this committee in particular and of the project as a whole. "Success" is, "we were able to spend money."
-
-I do love his accent, though--just a slight bit of Irish.
-
-And you'll notice bikeshedding is a huge problem in these organizations. "Excuse me, can you verify that my division problem for me?" But in the meantime the big elephant questions go un-asked.
-
-But they're only 45 or 60 days behind! Of course, that's for this particular reporting, which is not up to date for the meeting. The project itself... is another story.
-
-And did that sound like an answer to his question? "We'll give it to you later!" I can't tell you, from actual city council events and other similar activities--no one ever gives it to you later!--how many times people have just "oh, yeah, I'll tell you after the meeting"--never happens.
-
-## Utility Relocation
-
-I find telecom utility relocation particularly interesting, out of these four. That's the one where, 90% of the infrastructure for relocation probably didn't exist 16 year ago (since it's so modernization-heavy) when the project originally started. So, the project started; then it was built; and now it has to be relocated for an effort that had already began.
-
-What would really be an interesting follow-on to this conversation is, to go back into the historical records and look to compare, because at this level these numbers are going to be constantly adjusted and adjusted to present the best possible picture for the recent stage. How long has this been 98%? What were these numbers look like 10 years ago?
-
-And surely enough, despite finalizing right-of-way refactoring a few years ago, it was supposed to be at 98.5% a while back! What possibly could have happened?
-
-And we all know construction will stay on schedule for 24/25! Right? They're counting on it, they're *booking* on continuous delays across the project, including engineering activities.
-
-## Other Comparisons
-
-Compare that to the Brightline that just opened two years ago, in December 2022 (with extended service to Orlando and West Palm Beach fall of 2023).
-
-The really interesting thing here is going to be the LA to Las Vegas. It is not at all clear to me--even though they're taking realistic funding (several times more than Florida0)--that... well, I'm not sure this is going to be anywhere near enough for California issues.
-
-And have I mentioned Morocco yet?
-
-I'll bet the contractors working over the holidays wasn't cheap. But again, what are the metrics for success? People are working, we're doing great!
-
-## Conclusion
-
-I'm not sure what interesting follow-up there could be--certaintly, lots of directions we *could* go. Other projects we could compare, etc. Hopefully you found that as interesting as I did.
-
-We might also try and explore a wider, lower-level engineering idea I'd like to explore. But until then, take care.
+Florida has been able to put together an effort, more privatized than CAHSR, called "Brightline" that (while traditional diesel-electric) has passenger rail up to 100 MPH. They are raising funds (public and private) to also build out a "Brightline West" connecting Las Vegas to locations around San Bernardino. The approaches are very different and (while not entirely apples-to-apples, since they are building across the Mojave instead of occupied farmland) it will be interesting to compare.
